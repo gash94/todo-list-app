@@ -6,7 +6,7 @@
     --light: #eee;
     --dark: #313154;
     --danger: #ff5b57;
-    
+
     --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
     --business-glow: 0px 0px 4px rgba(58, 130, 238, 0.75);
@@ -32,6 +32,12 @@ button {
 body {
     background: var(--light);
     color: var(--dark);
+}
+
+.app {
+    max-width: 600px;
+    min-width: 320px;
+    margin: 0 auto;
 }
 
 section {

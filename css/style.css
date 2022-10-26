@@ -6,11 +6,9 @@
     --light: #eee;
     --dark: #313154;
     --danger: #ff5b57;
-
     --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-
-    --business-glow: 0px 0px 4px rgba(58, 130, 238, 0.75);
-    --personal-glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
+    --personal-glow: 0px 0px 4px rgba(58, 130, 238, 0.75);
+    --business-glow: 0px 0px 4px rgba(241, 38, 72, 0.75);
 }
 
 * {
@@ -41,10 +39,16 @@ body {
 }
 
 section {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     padding-left: 1.5rem;
     padding-right: 1.5em;
+}
+h1 {
+    color: var(--dark);
+    font-size: 1.75rem;
+    font-weight: 200;
+    margin-bottom: 0.5rem; 
 }
 
 h3 {
@@ -63,6 +67,7 @@ h4 {
 
 .greeting .title {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .greeting .title input {
@@ -74,7 +79,7 @@ h4 {
 .greeting .title,
 .greeting .title input {
     color: var(--dark);
-    font-size: 1.75rem;
+    font-size: 2rem;
     font-weight: 700;
 }
 
@@ -87,14 +92,14 @@ h4 {
     background-color: #fff;
     border-radius: 0.5rem;
     box-shadow: var(--shadow);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .create-todo .options {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .create-todo .options label {
@@ -103,7 +108,7 @@ h4 {
     align-items: center;
     justify-content: center;
     padding: 1.5rem;
-    background-color: #fff;
+    /* background-color: #fff; */
     border-radius: 0.5rem;
     box-shadow: var(--shadow);
     cursor: pointer;
@@ -121,6 +126,7 @@ input[type="checkbox"] {
     width: 20px;
     height: 20px;
     border-radius: 50%;
+    
     border: 2px solid var(--business);
     box-shadow: var(--business-glow);
 }
@@ -128,6 +134,7 @@ input[type="checkbox"] {
 .bubble.personal {
     border-color: var(--personal);
     box-shadow: var(--personal-glow);
+    
 }
 
 .bubble::after {
@@ -176,6 +183,13 @@ input:checked ~ .bubble::after {
     opacity: 0.75;
 }
 
+.personal {
+    background-color: rgba(58, 130, 238, 0.2);
+}
+
+.business {
+    background-color: rgba(241, 38, 72, 0.2);
+}
 .todo-list .list {
     margin: 1rem 0;
 }

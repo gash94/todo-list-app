@@ -57,8 +57,10 @@ function displayTodos() {
 
         if (todo.category == "personal") {
             span.classList.add("personal");
+            todoItem.style.backgroundColor = "rgba(58, 130, 238, 0.2)";
         } else {
             span.classList.add("business");
+            todoItem.style.backgroundColor = "rgba(241, 38, 72, 0.2)";
         }
 
         content.classList.add("todo-content");
@@ -82,6 +84,7 @@ function displayTodos() {
 
         if (todo.done) {
             todoItem.classList.add("done");
+            todoItem.style.backgroundColor = "rgb(180, 175, 175, 0.2)";
         }
         input.addEventListener("click", (e) => {
             todo.done = e.target.checked;
